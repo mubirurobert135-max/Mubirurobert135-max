@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Dashboard</h1>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for a city..." 
+                    class="search-input"
+                >
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Current Weather Section -->
+            <section id="currentWeather" class="weather-section current-weather">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Loading weather data...
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section id="hourlyForecast" class="weather-section">
+                <h2><i class="fas fa-hourglass-start"></i> Hourly Forecast</h2>
+                <div id="hourlyContainer" class="forecast-container"></div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section id="dailyForecast" class="weather-section">
+                <h2><i class="fas fa-calendar-days"></i> 5-Day Forecast</h2>
+                <div id="dailyContainer" class="forecast-container"></div>
+            </section>
+
+            <!-- Weather Details -->
+            <section id="weatherDetails" class="weather-section">
+                <h2><i class="fas fa-info-circle"></i> Weather Details</h2>
+                <div id="detailsContainer" class="details-grid"></div>
+            </section>
+
+            <!-- Error Message -->
+            <div id="errorMsg" class="error-message"></div>
+        </main>
+
+        <footer>
+            <p>Weather data provided by OpenWeatherMap API</p>
+            <p>Made with <i class="fas fa-heart"></i> by Your Name</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
