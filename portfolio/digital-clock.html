@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock - Multiple Time Zones</title>
+  <link rel="stylesheet" href="clock-styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="digital-clock.html" class="nav-link active">Digital Clock</a>
+    </div>
+  </nav>
+
+  <!-- Clock Section -->
+  <section class="clock-section">
+    <div class="clock-container">
+      <h1>Global Time Zones</h1>
+      <p class="section-intro">View current time across different time zones worldwide</p>
+      
+      <!-- Main Display Clock -->
+      <div class="main-clock">
+        <div class="time-display" id="mainTime">00:00:00</div>
+        <div class="timezone-label" id="mainTimezone">UTC</div>
+      </div>
+
+      <!-- Time Zone Selector -->
+      <div class="timezone-selector">
+        <label for="timezoneSelect">Select Time Zone:</label>
+        <select id="timezoneSelect" class="timezone-dropdown">
+          <option value="UTC">UTC (Coordinated Universal Time)</option>
+          <option value="EST">EST (Eastern Standard Time)</option>
+          <option value="CST">CST (Central Standard Time)</option>
+          <option value="MST">MST (Mountain Standard Time)</option>
+          <option value="PST">PST (Pacific Standard Time)</option>
+          <option value="GMT">GMT (Greenwich Mean Time)</option>
+          <option value="CET">CET (Central European Time)</option>
+          <option value="EET">EET (Eastern European Time)</option>
+          <option value="IST">IST (India Standard Time)</option>
+          <option value="JST">JST (Japan Standard Time)</option>
+          <option value="AEST">AEST (Australian Eastern Standard Time)</option>
+          <option value="NZST">NZST (New Zealand Standard Time)</option>
+        </select>
+      </div>
+
+      <!-- Clock Cards Grid -->
+      <div class="clocks-grid">
+        <!-- UTC -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="utc-hour"></div>
+            <div class="hand minute-hand" id="utc-minute"></div>
+            <div class="hand second-hand" id="utc-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>UTC</h3>
+            <p class="digital-time" id="utc-time">00:00:00</p>
+            <p class="timezone-name">Coordinated Universal Time</p>
+          </div>
+        </div>
+
+        <!-- EST (UTC-5) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="est-hour"></div>
+            <div class="hand minute-hand" id="est-minute"></div>
+            <div class="hand second-hand" id="est-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>EST</h3>
+            <p class="digital-time" id="est-time">00:00:00</p>
+            <p class="timezone-name">Eastern Standard Time (UTC-5)</p>
+          </div>
+        </div>
+
+        <!-- CST (UTC-6) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="cst-hour"></div>
+            <div class="hand minute-hand" id="cst-minute"></div>
+            <div class="hand second-hand" id="cst-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>CST</h3>
+            <p class="digital-time" id="cst-time">00:00:00</p>
+            <p class="timezone-name">Central Standard Time (UTC-6)</p>
+          </div>
+        </div>
+
+        <!-- PST (UTC-8) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="pst-hour"></div>
+            <div class="hand minute-hand" id="pst-minute"></div>
+            <div class="hand second-hand" id="pst-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>PST</h3>
+            <p class="digital-time" id="pst-time">00:00:00</p>
+            <p class="timezone-name">Pacific Standard Time (UTC-8)</p>
+          </div>
+        </div>
+
+        <!-- GMT (UTC+0) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="gmt-hour"></div>
+            <div class="hand minute-hand" id="gmt-minute"></div>
+            <div class="hand second-hand" id="gmt-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>GMT</h3>
+            <p class="digital-time" id="gmt-time">00:00:00</p>
+            <p class="timezone-name">Greenwich Mean Time (UTC+0)</p>
+          </div>
+        </div>
+
+        <!-- CET (UTC+1) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="cet-hour"></div>
+            <div class="hand minute-hand" id="cet-minute"></div>
+            <div class="hand second-hand" id="cet-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>CET</h3>
+            <p class="digital-time" id="cet-time">00:00:00</p>
+            <p class="timezone-name">Central European Time (UTC+1)</p>
+          </div>
+        </div>
+
+        <!-- IST (UTC+5:30) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="ist-hour"></div>
+            <div class="hand minute-hand" id="ist-minute"></div>
+            <div class="hand second-hand" id="ist-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>IST</h3>
+            <p class="digital-time" id="ist-time">00:00:00</p>
+            <p class="timezone-name">India Standard Time (UTC+5:30)</p>
+          </div>
+        </div>
+
+        <!-- JST (UTC+9) -->
+        <div class="clock-card">
+          <div class="clock-face">
+            <div class="hand hour-hand" id="jst-hour"></div>
+            <div class="hand minute-hand" id="jst-minute"></div>
+            <div class="hand second-hand" id="jst-second"></div>
+            <div class="center-dot"></div>
+          </div>
+          <div class="clock-info">
+            <h3>JST</h3>
+            <p class="digital-time" id="jst-time">00:00:00</p>
+            <p class="timezone-name">Japan Standard Time (UTC+9)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Roberts Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="clock-script.js"></script>
+</body>
+</html>
