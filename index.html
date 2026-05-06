@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubirurobert135-max - Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div style="font-weight: bold; font-size: 1.2rem; color: white;">
+            Mubirurobert135-max
+        </div>
+        <div>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="section" id="home">
+        <div style="text-align: center; padding: 40px 0;">
+            <h1>Welcome to My Digital Portfolio</h1>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 30px;">
+                Building amazing digital experiences with modern web technologies
+            </p>
+            <button onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+                Explore My Services
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <div class="services">
+            <h3>Who I Am</h3>
+            <p>
+                I'm a passionate web developer and designer with expertise in creating responsive, 
+                user-friendly websites. With a focus on clean code and modern design principles, 
+                I help businesses establish their digital presence.
+            </p>
+            <p>
+                My journey in web development started with a curiosity about how things work online. 
+                Over the years, I've honed my skills in HTML, CSS, JavaScript, and various modern frameworks.
+            </p>
+            <h3>My Expertise</h3>
+            <ul>
+                <li>Responsive Web Design</li>
+                <li>Front-end Development (HTML, CSS, JavaScript)</li>
+                <li>UI/UX Design Principles</li>
+                <li>Website Optimization</li>
+                <li>Digital Strategy</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2>My Services</h2>
+        <div class="grid">
+            <div class="service-card">
+                <h3>🎨 Web Design</h3>
+                <p>
+                    Creating beautiful, modern websites that capture your brand's essence. 
+                    I focus on user experience and visual aesthetics to make your site stand out.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>💻 Web Development</h3>
+                <p>
+                    Building responsive, fast-loading websites with clean, maintainable code. 
+                    From simple landing pages to complex applications, I've got you covered.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>📱 Mobile Optimization</h3>
+                <p>
+                    Ensuring your website looks perfect on all devices. I develop mobile-first 
+                    solutions that work seamlessly across smartphones, tablets, and desktops.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>⚡ Performance Optimization</h3>
+                <p>
+                    Fast websites are crucial for user satisfaction and SEO. I optimize images, 
+                    code, and server responses to ensure lightning-fast load times.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>🔍 SEO Services</h3>
+                <p>
+                    Improve your online visibility with SEO-friendly website design. 
+                    I implement best practices to help your site rank higher in search results.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>🛠️ Maintenance & Support</h3>
+                <p>
+                    Ongoing support to keep your website running smoothly. 
+                    I provide updates, security patches, and technical support as needed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <h2>Recent Projects</h2>
+        <div class="grid">
+            <div class="services">
+                <h3>E-Commerce Platform</h3>
+                <p>
+                    A fully functional e-commerce website with product catalog, shopping cart, 
+                    and secure payment integration. Built with modern technologies for optimal performance.
+                </p>
+                <button>View Project →</button>
+            </div>
+            <div class="services">
+                <h3>Business Website</h3>
+                <p>
+                    Professional business website showcasing services, team, and client testimonials. 
+                    Includes contact forms, blog section, and SEO optimization.
+                </p>
+                <button>View Project →</button>
+            </div>
+            <div class="services">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A creative portfolio site featuring case studies, skills, and interactive elements. 
+                    Designed to impress clients and showcase work effectively.
+                </p>
+                <button>View Project →</button>
+            </div>
+            <div class="services">
+                <h3>Dashboard Application</h3>
+                <p>
+                    An interactive dashboard for data visualization and analytics. 
+                    Real-time updates with responsive charts and comprehensive reporting features.
+                </p>
+                <button>View Project →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="services" style="max-width: 600px; margin: 0 auto;">
+            <p>
+                Have a project in mind? I'd love to hear from you. 
+                Fill out the form below and I'll get back to you as soon as possible.
+            </p>
+            <form onsubmit="handleSubmit(event)">
+                <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    required
+                >
+                <input 
+                    type="email" 
+                    placeholder="Your Email" 
+                    required
+                >
+                <textarea 
+                    placeholder="Your Message" 
+                    required
+                ></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            
+            <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+            
+            <h3>Connect With Me</h3>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <a href="https://github.com/mubirurobert135-max" 
+                   style="color: #2563eb; text-decoration: none; font-weight: bold;">
+                    GitHub
+                </a>
+                <a href="https://twitter.com" 
+                   style="color: #2563eb; text-decoration: none; font-weight: bold;">
+                    Twitter
+                </a>
+                <a href="https://linkedin.com" 
+                   style="color: #2563eb; text-decoration: none; font-weight: bold;">
+                    LinkedIn
+                </a>
+                <a href="mailto:mubirurobert135@gmail.com" 
+                   style="color: #2563eb; text-decoration: none; font-weight: bold;">
+                    Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #ddd;">
+        <p style="color: #666;">
+            &copy; 2026 Mubirurobert135-max. All rights reserved. | 
+            <a href="#home" style="color: #2563eb; text-decoration: none;">Back to Top</a>
+        </p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
